@@ -227,7 +227,7 @@ header{
 
 .clients{
     background: url("img/clients-bg.jpg") no-repeat center top;
-    background-size: 100%;
+    background-size: cover;
     padding: 30px 0;
 }
 .clients__wrapper{
@@ -404,9 +404,9 @@ header{
 }
 .staff{
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
-    right: 100px;
+    right: 150px;
     width: 430px;
     height: 430px;
     background-color: #300b58;
@@ -486,4 +486,151 @@ header{
     color: #9e5ee3;
     font-size: 25px;
     line-height: 30px;
+}
+.profit{
+    background: url("img/profit-bg.jpg") no-repeat center top;
+    background-size: cover;
+}
+.profit__wrapper{
+    max-width: 1168px;
+    margin: auto;
+    padding: 100px 0 20px;
+    text-align: center;
+}
+.profit__title{
+    font-size: 33px;
+    line-height: 38px;
+    color: #ffe22c;
+    margin-bottom: 100px;
+}
+.profit__items{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+.profit__item{
+    width: 40%;
+    margin-bottom: 50px;
+}
+.profit__item:last-child{
+    width: 70%;
+    margin: 0 auto 40px;
+}
+.profit__item h4{
+    margin: 0;
+    font-size: 38px;
+    line-height: 45px;
+    color: #ffffff;
+}
+.profit__item span{
+    font-size: 125px;
+    line-height: 135px;
+}
+.profit__btn{
+    border: 5px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 40%;
+    margin: auto;
+}
+.profit__btn a{
+    display: block;
+    text-decoration: none;
+    font-size: 33px;
+    line-height: 38px;
+    color: #ffea00;
+    background: linear-gradient(#422866, #665182);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.salary{
+    background: url("img/salary-bg.png") no-repeat right top;
+    background-size: cover;
+}
+.salary__wrapper{
+    max-width: 1168px;
+    margin: auto;
+    padding: 100px 0 30px;
+    position: relative;
+}
+.salary__map{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    text-align: center;
+    font-size: 33px;
+    line-height: 38px;
+    color: #747474;
+}
+.salary__title{
+    text-align: center;
+    width: 50%;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: lighter;
+    color: #300b36;
+    margin-bottom: 60px;
+}
+.salary__title b{
+    font-weight: bold;
+    font-size: 33px;
+    line-height: 36px;
+    display: block;
+}
+.salary__items{
+    width: 47%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.salary__item{
+    width: 39%;
+    margin-bottom: 60px;
+}
+.salary__item.equals{
+    width: 5%;
+}
+.salary__item{
+    font-size: 33px;
+    line-height: 38px;
+    color: #300b36;
+}
+.salary__item b{
+    font-size: 58px;
+    line-height: 65px;
+    display: block;
+}
+.salary__btn{
+    border: 5px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto 50px;
+}
+.salary__btn a{
+    display: block;
+    text-decoration: none;
+    font-size: 33px;
+    line-height: 38px;
+    color: #ffea00;
+    background: linear-gradient(#422866, #665182);
+    border-radius: 10px;
+    padding: 10px;
+}
+.salary__btn a span{
+    font-size: 25px;
+    line-height: 30px;
+    color: #ffffff;
+}
+.salary__info{
+    width: 85%;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: lighter;
+    color: #300b36;
 }
