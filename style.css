@@ -702,12 +702,16 @@ header{
 }
 .plan__left{
     width: 60%;
+    position: relative;
 }
 .plan__promo{
     font-size: 44px;
     line-height: 50px;
     color: #ffffff;
     margin-bottom: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 70%;
 }
 .plan__promo span{
     display: block;
@@ -717,7 +721,7 @@ header{
 .plan__left ul{
     padding: 0;
     list-style: none;
-    margin: 0 0 90px;
+    margin-top: 50px;
 }
 .plan__left li{
     font-size: 25px;
@@ -726,10 +730,21 @@ header{
     font-weight: lighter;
 }
 .plan__right{
-    width: 33%;
+    width: 35%;
+}
+.plan__start{
+    font-size: 75px;
+    line-height: 85px;
+    color: #fffffe;
+    margin-bottom: 40px;
+}
+.plan__start span{
+    font-size: 44px;
+    line-height: 50px;
+    display: block;
 }
 .plan__line{
-    height: 880px;
+    height: 920px;
     position: relative;
 }
 .plan__line::before{
@@ -742,7 +757,7 @@ header{
     background-color: #ffe400;
     border-radius: 10px;
 }
-.plan__step{
+.plan__time{
     position: relative;
     background: linear-gradient(to bottom, #fee54a 10%, #fed32c 50%, #fee54a 90%);
     font-size: 75px;
@@ -755,14 +770,122 @@ header{
     border-radius: 10px;
     margin-bottom: 30px;
 }
-.plan__step b{
+.plan__time b{
     font-size: 58px;
     line-height: 65px;
     display: inline-block;
 }
-.plan__step span{
+.plan__time span{
     font-size: 42px;
     line-height: 50px;
+}
+.plan__step{
+    font-size: 25px;
+    line-height: 27px;
+    color: #060620;
+    font-weight: lighter;
+    text-align: center;
+}
+.plan__step1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: -15px;
+}
+.plan__step::before{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #ffe400;
+    border-radius: 50%;
+}
+.plan__step1::before{
+    left: 50%;
+    top: 15px;
+    transform: translateX(-50%);
+}
+.plan__step1 span{
+    width: 46%;
+}
+.plan__step2{
+    position: relative;
+
+}
+.plan__step2 span{
+    position: absolute;
+    left: 52%;
+    right: -15%;
+    top: -20px;
+}
+.plan__step2::before{
+    left: 47%;
+    top: 40%;
+}
+.plan__step3{
+    margin: 50px 0 10px;
+    width: 47%;
+    position: relative;
+}
+.plan__step3::before{
+    left: 100%;
+    top: 40%;
+}
+.plan__step5{
+    position: relative;
+    margin-bottom: 150px;
+}
+.plan__step5::before{
+    left: 47%;
+    top: 50px;
+}
+.plan__step5 span{
+    position: absolute;
+    left: -15%;
+    right: 50%;
+}
+.plan__step6{
+    position: relative;
+    margin-bottom: 300px;
+}
+.plan__step6::before{
+    left: 47%;
+    top: 50px;
+}
+.plan__step6 span{
+    position: absolute;
+    right: -15%;
+    left: 52%;
+}
+.plan__step7{
+    color: #ffffff;
+}
+.plan__step7::before{
+    top: 15px;
+}
+.plan__btn{
+    border: 5px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 150px auto 300px;
+    text-align: center;
+}
+.plan__btn a{
+    display: block;
+    text-decoration: none;
+    font-size: 46px;
+    line-height: 50px;
+    color: #ffea00;
+    background: linear-gradient(#422866, #665182);
+    border-radius: 10px;
+    padding: 10px;
+}
+.plan__btn a span{
+    font-size: 32px;
+    line-height: 36px;
+    color: #ffffff;
+    display: block;
 }
 
 .plan__bottom .plan__text{
@@ -778,4 +901,117 @@ header{
 .plan__bottom h5:last-of-type::before,
 .plan__bottom h5:last-of-type::after{
     display: none;
+}
+
+.footer{
+    background: url("img/footer-bg.jpg") no-repeat center top;
+    background-size: cover;
+}
+.footer__wrapper{
+    max-width: 1168px;
+    margin: auto;
+    padding: 30px 0 80px;
+    text-align: center;
+}
+.footer p{
+    margin: 0;
+    font-size: 25px;
+    line-height: 30px;
+    color: #fff600;
+    font-weight: lighter;
+}
+.footer__title{
+    position: relative;
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+}
+.footer__title::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 5px;
+    background-color: #ffe200;
+    border-radius: 3px;
+}
+.footer__title::after{
+    content: '';
+    position: absolute;
+    bottom: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: #ffe200;
+    border-radius: 50%;
+}
+.footer__motivate{
+    padding: 30px 30px 40px;
+    border-radius: 10px;
+    background-color: #34185a;
+    font-size: 33px;
+    line-height: 38px;
+    color: #ffffff;
+    width: 85%;
+    margin: 0 auto 20px;
+}
+.footer__items{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+}
+.footer__item{
+    width: 49%;
+    text-align: left;
+}
+.footer__item p{
+    color: #ffffff;
+}
+.footer__item span{
+    display: block;
+    width: 80%;
+    padding: 0 10%;
+    margin-bottom: 35px;
+    color: #fff600;
+}
+.footer__item b{
+    display: block;
+}
+.footer__btn{
+    border: 5px solid #fff;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto 200px;
+    text-align: center;
+    width: 35%;
+}
+.footer__btn a{
+    display: block;
+    text-decoration: none;
+    font-size: 46px;
+    line-height: 50px;
+    color: #ffea00;
+    background-color: #34185a;
+    border-radius: 10px;
+    padding: 10px;
+}
+.footer__img{
+    margin-bottom: 30px;
+}
+.footer__img img{
+    max-width: 100%;
+    height: auto;
+}
+.footer__contacts{
+    color: #ffffff;
+    font-weight: lighter;
+    font-size: 25px;
+    line-height: 30px;
+}
+.footer__contacts a{
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
