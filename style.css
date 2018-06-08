@@ -57,9 +57,68 @@ header{
 .nav a{
     color: #fefefe;
 }
+.nav a:hover{
+    color: #ffe300;
+}
 .info__contacts a{
     text-align: right;
     color: #ffe300;
+}
+.info__contacts a:hover{
+    color: #ffffff;
+}
+.nav__btn{
+    width: 40px;
+    border: none;
+    height: 30px;
+    background: none;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    z-index: 100;
+}
+.nav__btn:active,
+.nav__btn:focus{
+    outline: none;
+}
+.nav__btn span{
+    height: 3px;
+    background-color: #ffe300;
+    display: block;
+    width: 30px;
+    position: relative;
+}
+.nav__btn span::after,
+.nav__btn span::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    background-color: #ffe300;
+    top: -8px;
+    left: 0;
+    width: 30px;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+.nav__btn span::after{
+    top: 8px;
+}
+.open {
+    margin: 0;
+    width: 50px;
+    height: 40px;
+    border-radius: 60px;
+}
+.open:before {
+    -webkit-transform: rotate(52deg);
+    -ms-transform: rotate(52deg);
+    transform: rotate(52deg);
+    right: 22px;
+    top: 23px;
+    height: 18px;
 }
 
 .consulting{
@@ -121,14 +180,23 @@ header{
     margin: auto;
     border-radius: 20px;
     padding: 5px 20px 10px;
+    transition: .2s;
 }
 .consulting a span{
     display: block;
     color: #2e0956;
+    transition: .2s;
+}
+.consulting a:hover{
+    background: linear-gradient(to bottom, #52137c, #0b002a);
+    color: #ffffff;
+}
+.consulting a:hover span{
+    color: #ffffff;
 }
 
 .help{
-    background: url("img/help-bg.png") no-repeat right top;
+    background: #FFF586 url("img/help-bg.png") no-repeat right top;
     background-size: 100%;
 }
 .help::before{
@@ -215,10 +283,16 @@ header{
     font-size: 25px;
     line-height: 30px;
     color: #331758;
-    margin: 0;
+    margin: 0 0 15px;
 }
 .help__item p{
     font-weight: lighter;
+}
+.help__img{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .help__img img{
     max-width: 100%;
@@ -236,7 +310,7 @@ header{
 }
 .clients__title{
     background: url("img/header-bg.jpg") no-repeat center center;
-    background-size: 100%;
+    background-size: cover;
     font-size: 33px;
     line-height: 38px;
     text-align: center;
@@ -701,7 +775,7 @@ header{
     font-weight: lighter;
 }
 .plan__left{
-    width: 60%;
+    width: 55%;
     position: relative;
 }
 .plan__promo{
@@ -730,7 +804,7 @@ header{
     font-weight: lighter;
 }
 .plan__right{
-    width: 35%;
+    width: 40%;
 }
 .plan__start{
     font-size: 75px;
@@ -816,7 +890,6 @@ header{
 .plan__step2 span{
     position: absolute;
     left: 52%;
-    right: -15%;
     top: -20px;
 }
 .plan__step2::before{
@@ -855,7 +928,6 @@ header{
 }
 .plan__step6 span{
     position: absolute;
-    right: -15%;
     left: 52%;
 }
 .plan__step7{
@@ -1014,4 +1086,318 @@ header{
     display: block;
     text-decoration: none;
     color: inherit;
+}
+
+@media (max-width: 1350px) {
+    .plan__wrapper{
+        max-width: none;
+        padding: 30px;
+    }
+}
+
+@media(max-width: 1199px) {
+    .header__wrapper,
+    .consulting__wrapper,
+    .clients__wrapper,
+    .advance__wrapper{
+        max-width: none;
+        padding: 0 30px;
+    }
+    .header__info{
+        width: 65%;
+    }
+    .header__info a{
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .help__wrapper{
+        max-width: none;
+        padding: 30px 30px 25px;
+    }
+    .help__text{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .help__title,
+    .help__calc a{
+        font-size: 25px;
+        line-height: 30px;
+        width: 35%;
+    }
+    .help__title span,
+    .help__calc span{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .help__item h5{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .help__item p{
+        font-size: 16px;
+    }
+    .clients__item{
+        width: 32%;
+    }
+    .advance__title{
+        font-size: 30px;
+        line-height: 36px;
+        padding: 10px;
+    }
+    .staff{
+        width: 350px;
+        height: 350px;
+    }
+    .staff h6{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .advance p{
+        width: 30%;
+    }
+}
+
+@media(max-width: 991px) {
+    .nav__btn{
+        display: block;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+    }
+    .nav__btn.open span{
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .nav__btn.open span::before{
+        left: 50%;
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .nav__btn.open span::after{
+        left: 50%;
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    .nav ul{
+        opacity: 0;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: absolute;
+        top: -300px;
+        right: -50px;
+        padding: 30px 0;
+        width: auto;
+        left: -50px;
+    }
+    .nav{
+        top: 0;
+        padding: 15px 0 40px;
+        margin-bottom: 0;
+    }
+    .nav ul.visible{
+        -webkit-transform: translate(0, 65px);
+        -ms-transform: translate(0, 65px);
+        transform: translate(0, 65px);
+        opacity: 1;
+        top: -65px;
+        background: linear-gradient(to bottom, #52137c, #0b002a);
+        -webkit-box-shadow: 0 2px 15px #ffe300;
+        box-shadow: 0 2px 15px #ffe300;
+    }
+    .header__wrapper{
+        position: static;
+    }
+    .nav__btn {
+        top: 50px;
+        right: 30px;
+    }
+    .nav li{
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+    .nav ul a{
+        padding-bottom: 0;
+        font-size: 20px;
+        margin: auto;
+        text-align: center;
+    }
+    .consulting h1{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .consulting p{
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .consulting a{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .help__text{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .help__title,
+    .help__calc a{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .help__title span,
+    .help__calc span{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .help__item h5{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .help__item p{
+        font-size: 14px;
+    }
+    .help__calc{
+        align-self: center;
+        margin: auto;
+    }
+    .help__items{
+        margin-top: 80px;
+        flex-wrap: wrap;
+    }
+    .help__item{
+        width: 30%;
+        margin-bottom: 50px;
+    }
+    .clients__item{
+        width: 48%;
+    }
+    .advance__title{
+        margin: 0 auto 15px;
+    }
+    .advance h5{
+        margin: 0 auto 70px;
+        width: 100%;
+    }
+    .advance h5::before{
+        width: 50%;
+    }
+    .staff{
+        position: relative;
+        right: 0;
+        margin: 100px auto 150px;
+        transform: none;
+        width: 250px;
+        height: 250px;
+    }
+    .advance p{
+        width: 100%;
+        order: 2;
+    }
+    .advance__wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__wrapper,
+    .consulting__wrapper,
+    .help__wrapper{
+        padding: 20px;
+    }
+    .consulting h1{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .consulting p{
+        font-size: 22px;
+        line-height: 30px;
+        margin-bottom: 25px;
+    }
+    .consulting a{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .help__text{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .help__title,
+    .help__calc a{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .help__title span,
+    .help__calc span{
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .help__title,
+    .help__calc{
+        width: 230px;
+    }
+    .help__item h5{
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .help__item p{
+        font-size: 14px;
+    }
+    .clients__item{
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto 30px;
+    }
+    .clients__title{
+        font-size: 25px;
+        line-height: 30px;
+        padding: 20px;
+    }
+    .clients__title span{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .staff{
+        width: 240px;
+        height: 240px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 579px) {
+    .consulting h1{
+        font-size: 25px;
+        line-height: 32px;
+    }
+    .consulting p{
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .consulting a{
+        font-size: 16px;
+        line-height: 22px;
+        padding: 5px 10px 10px;
+        width: 160px;
+    }
+    .help{
+        background-image: none;
+        text-align: center;
+    }
+    .help__bar{
+        margin: 0 auto 30px;
+        width: 240px;
+    }
+    .help__title{
+        margin: auto;
+    }
+    .help__item{
+        width: 100%;
+    }
 }
