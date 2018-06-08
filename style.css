@@ -349,7 +349,7 @@ header{
 }
 .useBest{
     background: url("img/useBest-bg.png") no-repeat;
-    background-size: 100%;
+    background-size: cover;
     margin-top: -140px;
 }
 .useBest__wrapper{
@@ -1093,13 +1093,18 @@ header{
         max-width: none;
         padding: 30px;
     }
+    .useBest {
+        background-size: 90%;
+         margin-top: 0;
+    }
 }
 
 @media(max-width: 1199px) {
     .header__wrapper,
     .consulting__wrapper,
     .clients__wrapper,
-    .advance__wrapper{
+    .advance__wrapper,
+    .useBest__wrapper{
         max-width: none;
         padding: 0 30px;
     }
@@ -1154,6 +1159,27 @@ header{
     }
     .advance p{
         width: 30%;
+    }
+    .useBest__content p,
+    .useBest__content h6{
+        font-size: 20px;
+        line-height: 25px;
+        margin-top: 0;
+    }
+    .useBest__title{
+        font-size: 25px;
+        line-height: 30px;
+        margin-top: 40px;
+    }
+    .useBest__item{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .useBest__content {
+        padding-top: 90px;
+    }
+    .profit__wrapper{
+        max-width: none;
     }
 }
 
@@ -1292,16 +1318,44 @@ header{
         right: 0;
         margin: 100px auto 150px;
         transform: none;
-        width: 250px;
-        height: 250px;
+        width: 300px;
+        height: 300px;
+        font-size: 20px;
+        line-height: 25px;
     }
     .advance p{
         width: 100%;
         order: 2;
+        text-align: center;
     }
     .advance__wrapper{
         display: flex;
         flex-direction: column;
+    }
+    .useBest__content h6{
+        margin-bottom: 40px;
+    }
+    .useBest__title{
+        margin-top: 70px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .useBest__item{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .profit__title,
+    .profit__btn a{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .profit__item h4{
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .profit__item span{
+        font-size: 80px;
+        line-height: 90px;
     }
 }
 
@@ -1364,10 +1418,84 @@ header{
         line-height: 28px;
     }
     .staff{
-        width: 240px;
-        height: 240px;
-        font-size: 20px;
+        width: 100%;
+        height: auto;
         line-height: 24px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+        color: #fcce02;
+        margin: 0 auto 50px;
+    }
+    .staff__item{
+        position: relative;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .staff__1{
+        margin-top: 20px;
+    }
+    .staff__img{
+        margin: auto;
+    }
+    .staff h6{
+        margin-right: 30px;
+    }
+    .staff__2 h6{
+        order: 0;
+    }
+    .staff__3{
+        flex-direction: row;
+    }
+    .staff__3 .staff__img{
+        margin-bottom: 0;
+    }
+    .staff__4 h6,
+    .staff__5 h6{
+        position: static;
+    }
+    .staff__4{
+        flex-direction: row;
+        transform: none;
+    }
+    .useBest{
+        background-image: none;
+    }
+    .useBest__content,
+    .useBest__items{
+        width: 100%;
+    }
+    .useBest__content p{
+        text-align: center;
+    }
+    .profit__title,
+    .profit__btn a{
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .profit__item h4{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .profit__item span{
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .profit__title{
+        margin-bottom: 50px;
+    }
+    .profit__item,
+    .profit__item:last-child{
+        width: 100%;
+    }
+    .profit__btn{
+        width: 300px;
     }
 }
 
@@ -1399,5 +1527,11 @@ header{
     }
     .help__item{
         width: 100%;
+    }
+    .useBest__title{
+        margin-top: 100px;
+    }
+    .useBest__content h6{
+        margin-bottom: 0;
     }
 }
