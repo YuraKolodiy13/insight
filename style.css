@@ -37,7 +37,7 @@ header{
     height: auto;
 }
 .header__info{
-    width: 60%;
+    width: 62%;
     padding-top: 25px;
 }
 .header__info a{
@@ -879,7 +879,7 @@ header{
 .plan__step{
     font-size: 25px;
     line-height: 27px;
-    color: #060620;
+    color: #fff;
     font-weight: lighter;
     text-align: center;
 }
