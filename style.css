@@ -1,13 +1,21 @@
+@font-face {
+    font-family: 'COPRGTBold';
+    src: url('fonts/COPRGTB.ttf');
+}
+@font-face {
+    font-family: 'COPRGTLight';
+    src: url('fonts/COPRGTL.ttf');
+}
+
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Copperplate Gothic', Arial, sans-serif;
-    font-weight: bold;
+    font-family: COPRGTBold, Arial, sans-serif;
 }
 header{
     background: url("img/header-bg.jpg") no-repeat center center;
     background-size: cover;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
 }
 .header::before{
     content: '';
@@ -42,7 +50,7 @@ header{
 }
 .header__info a{
     font-size: 17px;
-    line-height: 24px;
+    line-height: 21px;
     text-decoration: none;
     display: block;
     text-transform: uppercase;
@@ -63,6 +71,9 @@ header{
 .info__contacts a{
     text-align: right;
     color: #ffe300;
+}
+.info__contacts a[href^='mailto']{
+    font-size: 15px;
 }
 .info__contacts a:hover{
     color: #ffffff;
@@ -182,6 +193,7 @@ header{
     border-radius: 20px;
     padding: 5px 20px 10px;
     transition: .2s;
+    box-shadow: 2px 2px 10px #000;
 }
 .consulting a span{
     display: block;
@@ -198,7 +210,7 @@ header{
 
 .help{
     background: #FFF586 url("img/help-bg.png") no-repeat right top;
-    background-size: 100%;
+    background-size: 100% 100%;
 }
 .help::before{
     content: '';
@@ -221,7 +233,7 @@ header{
     line-height: 33px;
     color: #331758;
     margin-bottom: 50px;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
 }
 .help__bar{
     width: 40%;
@@ -296,7 +308,7 @@ header{
     margin: 0;
 }
 .help__item p{
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
 }
 .help__img{
     height: 100px;
@@ -352,15 +364,14 @@ header{
 }
 .clients__item p{
     margin: 0 0 20px;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
     font-size: 25px;
     line-height: 25px;
     color: #ffffff;
 }
 .useBest{
     background: url("img/useBest-bg.png") no-repeat;
-    background-size: cover;
-    margin-top: -140px;
+    background-size: 100% 100%;
 }
 .useBest__wrapper{
     max-width: 1168px;
@@ -375,7 +386,7 @@ header{
     color: #300b58;
     font-size: 25px;
     line-height: 30px;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
     margin-bottom: 30px;
 }
 .useBest__content h6{
@@ -419,7 +430,7 @@ header{
 .useBest__item p{
     margin: 0;
     color: #fefefe;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
 }
 .advance{
     background-color: #fff;
@@ -484,7 +495,7 @@ header{
     color: #2b084d;
     font-size: 25px;
     line-height: 30px;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
 }
 .staff{
     position: absolute;
@@ -635,7 +646,14 @@ header{
 
 .salary{
     background: url("img/salary-bg.png") no-repeat right top;
-    background-size: cover;
+    background-size: 100% 100%;
+}
+.salary__img img{
+    max-width: 100%;
+    height: auto;
+}
+.salary__block > .salary__img{
+    display: none;
 }
 .salary__wrapper{
     max-width: 1168px;
@@ -657,7 +675,7 @@ header{
     width: 50%;
     font-size: 25px;
     line-height: 30px;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
     color: #300b36;
     margin-bottom: 80px;
 }
@@ -717,7 +735,7 @@ header{
     width: 85%;
     font-size: 25px;
     line-height: 30px;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
     color: #300b36;
 }
 
@@ -794,7 +812,7 @@ header{
     font-size: 25px;
     line-height: 30px;
     color: #ffffff;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
 }
 .plan__left{
     width: 55%;
@@ -823,7 +841,8 @@ header{
     font-size: 25px;
     line-height: 30px;
     color: #ffea00;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
+    margin-bottom: 20px;
 }
 .plan__right{
     width: 40%;
@@ -880,7 +899,7 @@ header{
     font-size: 25px;
     line-height: 27px;
     color: #fff;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
     text-align: center;
 }
 .plan__step1{
@@ -1013,7 +1032,7 @@ header{
     font-size: 25px;
     line-height: 30px;
     color: #fff600;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
 }
 .footer__title{
     position: relative;
@@ -1101,7 +1120,7 @@ header{
 }
 .footer__contacts{
     color: #ffffff;
-    font-weight: lighter;
+    font-family: COPRGTLight, Arial, sans-serif;
     font-size: 25px;
     line-height: 30px;
 }
@@ -1265,6 +1284,10 @@ header{
     .footer__btn a{
         font-size: 35px;
         line-height: 45px;
+    }
+    .salary__wrapper{
+        max-width: none;
+        padding: 100px 30px 30px;
     }
 }
 
@@ -1492,6 +1515,43 @@ header{
         margin-bottom: 100px;
         width: 50%;
     }
+    .salary__block > .salary__img{
+        display: block;
+    }
+    .salary__block > .salary__img img{
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .salary{
+        background: none;
+    }
+    .salary__wrapper{
+        padding: 0;
+    }
+    .salary__map,
+    .salary__title,
+    .salary__items,
+    .salary__info{
+        width: 100%;
+    }
+    .salary__block:nth-child(2),
+    .salary__info{
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+    .salary__info{
+        margin-bottom: 30px;
+    }
+    .salary__map{
+        top: 50px;
+    }
+    .salary__btn a{
+        font-size: 25px;
+        line-height: 30px;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -1670,6 +1730,17 @@ header{
     .footer__btn a{
         font-size: 25px;
         line-height: 35px;
+    }
+    .salary__item b{
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .salary__item{
+        font-size: 25px;
+        line-height: 20px;
+    }
+    .salary__btn{
+        width: 100%;
     }
 }
 
